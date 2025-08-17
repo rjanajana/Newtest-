@@ -31,7 +31,8 @@
                     <li><i class="fas fa-check"></i> No Rate Limiting</li>
                 </ul>
                 
-                <form id="subscriptionForm" class="subscription-form">
+                <!-- IMPORTANT: Remove form tag and use div -->
+                <div class="subscription-form">
                     <div class="input-group">
                         <i class="fas fa-user"></i>
                         <input type="text" id="userName" placeholder="Full Name" required>
@@ -47,20 +48,20 @@
                         <input type="tel" id="userPhone" placeholder="Phone Number" required>
                     </div>
                     
-                    <button type="submit" class="btn btn-premium btn-submit">
+                    <!-- IMPORTANT: Use button instead of submit -->
+                    <button type="button" id="payButton" class="btn btn-premium btn-submit">
                         <span class="btn-text">
                             <i class="fas fa-credit-card"></i> Pay ₹299
                         </span>
                         <div class="loading-spinner"></div>
                     </button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- IMPORTANT: Load Razorpay BEFORE your script -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
