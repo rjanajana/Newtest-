@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "builds": [
     {
@@ -20,13 +21,20 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "src": "/api/payment",
+      "dest": "/api/payment.py"
+    },
+    {
+      "src": "/api/call-external",
+      "dest": "/api/call-external.py"
+    },
+    {
+      "src": "/api/admin",
+      "dest": "/api/admin.py"
     },
     {
       "src": "/(.*)",
       "dest": "/$1"
     }
   ]
-
 }
