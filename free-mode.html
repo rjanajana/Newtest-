@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Mode - Premium API</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <h1><i class="fas fa-play"></i> Free Mode</h1>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-card">
+                <h2>Enter UID</h2>
+                <p>Get limited access to our API service</p>
+                
+                <form id="freeForm" class="api-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="freeUID" placeholder="Enter your UID" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-submit">
+                        <span class="btn-text">Get Data</span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </form>
+                
+                <div id="freeResult" class="result-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

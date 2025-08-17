@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Dashboard - Premium API</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="user-info">
+                <i class="fas fa-crown premium-badge"></i>
+                <span>Premium User</span>
+            </div>
+            <a href="index.html" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+        
+        <div class="dashboard-container">
+            <div class="welcome-section">
+                <h1>Welcome to Premium Dashboard</h1>
+                <p>You now have unlimited access to our API service</p>
+            </div>
+            
+            <div class="form-card">
+                <h2>API Access</h2>
+                <p>Enter any UID to get comprehensive data</p>
+                
+                <form id="premiumForm" class="api-form">
+                    <div class="input-group">
+                        <i class="fas fa-key"></i>
+                        <input type="text" id="premiumUID" placeholder="Enter UID for API call" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-premium btn-submit">
+                        <span class="btn-text">
+                            <i class="fas fa-search"></i> Get Premium Data
+                        </span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </form>
+                
+                <div id="premiumResult" class="result-container"></div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>API Calls</h3>
+                    <p id="apiCalls">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Last Access</h3>
+                    <p id="lastAccess">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar"></i>
+                    <h3>Member Since</h3>
+                    <p id="memberSince">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

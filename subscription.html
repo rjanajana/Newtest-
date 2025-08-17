@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Subscription - Premium API</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <h1><i class="fas fa-crown"></i> Premium Subscription</h1>
+        </div>
+        
+        <div class="subscription-container">
+            <div class="pricing-card">
+                <div class="price-header">
+                    <i class="fas fa-crown"></i>
+                    <h2>Premium Plan</h2>
+                    <div class="price">₹299<span>/month</span></div>
+                </div>
+                
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Unlimited API Calls</li>
+                    <li><i class="fas fa-check"></i> Priority Support</li>
+                    <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                    <li><i class="fas fa-check"></i> No Rate Limiting</li>
+                </ul>
+                
+                <form id="subscriptionForm" class="subscription-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="userName" placeholder="Full Name" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="userEmail" placeholder="Email Address" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="userPhone" placeholder="Phone Number" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-premium btn-submit">
+                        <span class="btn-text">
+                            <i class="fas fa-credit-card"></i> Pay ₹299
+                        </span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
